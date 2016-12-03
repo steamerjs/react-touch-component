@@ -3,7 +3,7 @@ react mobile touch component
 
 # Usage
 
-```
+```js
 import Touch from 'touch';
 
 export default class Demo extends Component {
