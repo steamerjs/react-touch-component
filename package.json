@@ -1,0 +1,26 @@
+{
+  "name": "react-touch-component",
+  "version": "1.0.0",
+  "description": "react-touch-component",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteamerTeam/react-touch-component.git.git"
+  },
+  "keywords": [
+    "react",
+    "touch"
+  ],
+  "author": "SteamerTeam polarjiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SteamerTeam/react-touch-component/issues"
+  },
+  "homepage": "https://github.com/SteamerTeam/react-touch-component",
+  "dependencies": {
+    "lodash.merge": "^4.6.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {}
+}
