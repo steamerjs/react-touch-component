@@ -1,6 +1,12 @@
 # react-touch-component
 react mobile touch component
 
+# Supported Events
+```js
+onTap onSingleTap onDoubleTap onLongTap
+onSwipe onSwipeUp onSwipeRight onSwipeDown onSwipeLeft
+```
+
 # Usage
 
 ```js
