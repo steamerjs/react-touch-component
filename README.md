@@ -1,16 +1,37 @@
-# react-touch-component
-react mobile touch component
+react-touch-component
+==========
 
-# Supported Events
+基于zepto touch封装的React Component
+
+onTap事件兼容PC使用
+
+Base on zepto touch lib.
+
+onTap event also works with PC as well.
+
+
+Supported Events
+----------
+
 ```js
 onTap onSingleTap onDoubleTap onLongTap
 onSwipe onSwipeUp onSwipeRight onSwipeDown onSwipeLeft
 ```
 
-# Usage
+
+Installation
+----------
+
+```
+$ npm install react-touch-component --save
+```
+
+
+Usage
+----------
 
 ```js
-import Touch from 'touch';
+import Touch from 'react-touch-component';
 
 export default class Demo extends Component {
   constructor(props, context) {
@@ -25,8 +46,14 @@ export default class Demo extends Component {
   
   render() {
     <Touch onTap={this.handleTap}>
-      <div>tap me</div>
+      <button>Tap me</button>
     </Touch>
   }
 }
 ```
+
+
+Changelog
+----------
+
+- `v1.0.0` (2017/2/8) 初版

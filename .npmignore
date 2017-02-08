@@ -1,0 +1,5 @@
+node_modules
+dev
+.git
+.webpack_cache
+addNpmOwner.js
