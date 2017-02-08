@@ -1,6 +1,8 @@
 react-touch-component
 ==========
 
+[![NPM Version](https://img.shields.io/npm/v/react-touch-component.svg?style=flat)](https://www.npmjs.com/package/react-touch-component)
+
 基于zepto touch封装的React Component
 
 onTap事件兼容PC使用
