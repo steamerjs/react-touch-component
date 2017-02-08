@@ -13,10 +13,15 @@ onTap event also works with PC as well.
 Supported Events
 ----------
 
-```js
-onTap onSingleTap onDoubleTap onLongTap
-onSwipe onSwipeUp onSwipeRight onSwipeDown onSwipeLeft
-```
+- onTap
+- onSingleTap
+- onDoubleTap
+- onLongTap
+- onSwipe
+- onSwipeUp
+- onSwipeRight
+- onSwipeDown
+- onSwipeLeft
 
 
 Installation
