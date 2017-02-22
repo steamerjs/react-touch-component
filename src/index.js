@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import assign from 'object-assign';
 
-let ua = navigator.userAgent.toLowerCase();
+let ua = navigator && navigator.userAgent.toLowerCase();
 let _platform = function(os) {
     let ver = ('' + (new RegExp(os + '(\\d+((\\.|_)\\d+)*)').exec(ua) || [,0])[1]).replace(/_/g, '.');
     // undefined < 3 === false, but null < 3 === true
