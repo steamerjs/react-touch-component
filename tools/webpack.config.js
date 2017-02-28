@@ -13,25 +13,16 @@ var Clean = require('clean-webpack-plugin'),
     Autoprefixer = require('autoprefixer');
 
 var devConfig = {
-    entry: path.join(configWebpack.path.example, "index.js"),
+    entry: {
+        'index': path.join(configWebpack.path.example, "index.js"),
+        'pindex': path.join(configWebpack.path.example, "pindex.js"),
+    },
     output: {
         path: path.join(configWebpack.path.dev),
-        filename: "index.js"
+        filename: "[name].js"
     },
     module: {
         loaders: [
-            { 
-                test: /\.jsx$/,
-                loader: 'babel',
-                query: {
-                    cacheDirectory: './.webpack_cache/',
-                    presets: [
-                        ["es2015", {"loose": true}],
-                        'stage-0'
-                    ]
-                },
-                exclude: /node_modules/,
-            },
             { 
                 test: /\.js$/,
                 loader: 'babel',
@@ -85,7 +76,7 @@ var devConfig = {
         // remove previous build folder
         new Clean(['dev'], {root: path.resolve()}),
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
     ],
     watch: true, //  watch mode

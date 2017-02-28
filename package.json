@@ -1,6 +1,6 @@
 {
   "name": "react-touch-component",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "react-touch-component",
   "main": "./lib/index.js",
   "scripts": {
@@ -46,6 +46,7 @@
     "less-loader": "^2.2.3",
     "postcss-import": "^9.0.0",
     "postcss-loader": "^1.2.1",
+    "preact": "^7.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "style-loader": "^0.13.0",

@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import Touch from '../src/index';
+/** @jsx h */
+import Preact, { h, render, Component } from 'preact';
+import Touch from '../src/pindex';
 
 const rootNode = document.getElementById('root');
 
-class Test extends React.Component {
-	constructor(props) {
-		super(props);
+class Test extends Component {
+	constructor(props, context) {
+		super(props, context);
 		this.state = {
 			result: '',
 		};
@@ -57,4 +57,4 @@ class Test extends React.Component {
     }
 }
 
-ReactDOM.render(<Test />, rootNode);
+render(<Test />, rootNode);

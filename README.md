@@ -3,7 +3,7 @@ react-touch-component
 
 [![NPM Version](https://img.shields.io/npm/v/react-touch-component.svg?style=flat)](https://www.npmjs.com/package/react-touch-component)
 
-基于zepto touch封装的React Component
+借鉴zepto touch封装的React Component
 
 onTap事件兼容PC使用
 
@@ -36,6 +36,7 @@ $ npm install react-touch-component --save
 
 Usage
 ----------
+React 版本
 
 ```js
 import Touch from 'react-touch-component';
@@ -59,9 +60,16 @@ export default class Demo extends Component {
 }
 ```
 
+Preact版本
+```js
+import Touch from 'react-touch-component/pindex';
+
+```
+
 
 Changelog
 ----------
 
 - `v1.0.0` (2017/2/8) 初版
 - `v1.0.1` (2017/2/22) 兼容Node环境，防止脚本报错
+- `v1.1.0` (2017/2/28) 新增preact版本

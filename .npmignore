@@ -3,3 +3,5 @@ dev
 .git
 .webpack_cache
 addNpmOwner.js
+.DS_Store
+example

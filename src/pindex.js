@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+/** @jsx h */
+import Preact, { h, Component } from 'preact';
 import assign from 'object-assign';
 
 let ua = navigator && navigator.userAgent.toLowerCase();
@@ -191,7 +192,7 @@ export default class Touch extends Component {
         		velocity = Math.sqrt(pos.absX * pos.absX + pos.absY * pos.absY) / time,
         		isFlick = velocity > this.props.flickThreshold;
 
-            e.persist();
+            // e.persist();
             assign(this.touchInfo, {
             	swipeTimeout: setTimeout(() => {
 	            	this.props.onSwipe && this.props.onSwipe(e, pos.deltaX, pos.deltaY, isFlick);
@@ -221,7 +222,7 @@ export default class Touch extends Component {
             if (pos.absX < this.maxTapAbsX && pos.absY < this.maxTapAbsY) {
                 // delay by one tick so we can cancel the 'tap' event if 'scroll' fires
                 // ('tap' fires before 'scroll')
-                e.persist();
+                // e.persist();
                 assign(this.touchInfo, {
                 	tapTimeout: setTimeout(() => {
 	                    // trigger universal 'tap' with the option to cancelTouch()
@@ -291,17 +292,6 @@ export default class Touch extends Component {
 	}
 }
 
-Touch.propTypes = {
-	onTap: PropTypes.func,
-	onSingleTap: PropTypes.func,
-	onDoubleTap: PropTypes.func,
-	onLongTap: PropTypes.func,
-    onSwipe: PropTypes.func,
-    onSwipeUp: PropTypes.func,
-    onSwipeRight: PropTypes.func,
-    onSwipeDown: PropTypes.func,
-    onSwipeLeft: PropTypes.func
-};
-Touch.defaultProps = {
-	flickThreshold: 0.6
-};
+// Touch.defaultProps = {
+// 	flickThreshold: 0.6
+// };
