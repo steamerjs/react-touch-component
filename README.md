@@ -70,6 +70,6 @@ import Touch from 'react-touch-component/pindex';
 Changelog
 ----------
 
-- `v1.0.0` (2017/2/8) 初版
-- `v1.0.1` (2017/2/22) 兼容Node环境，防止脚本报错
 - `v1.1.0` (2017/2/28) 新增preact版本
+- `v1.0.1` (2017/2/22) 兼容Node环境，防止脚本报错
+- `v1.0.0` (2017/2/8) 初版
