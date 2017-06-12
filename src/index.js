@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import assign from 'object-assign';
+import PropTypes from 'prop-types'
 
 let ua = navigator && navigator.userAgent.toLowerCase();
 let _platform = function(os) {
