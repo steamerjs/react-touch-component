@@ -62,7 +62,7 @@ export default class Demo extends Component {
 
 Preact版本
 ```js
-import Touch from 'react-touch-component/pindex';
+import Touch from 'react-touch-component/lib/pindex';
 
 ```
 
