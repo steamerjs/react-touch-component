@@ -1,6 +1,10 @@
 /** @jsx h */
 import Preact, { h, Component } from 'preact';
 import assign from 'object-assign';
+import Global from 'global';
+
+// 是否在Node环境
+const isNode = typeof window === 'undefined';
 
 let ua = navigator && navigator.userAgent.toLowerCase();
 let _platform = function(os) {
@@ -34,7 +38,7 @@ export default class Touch extends Component {
 			longTapTimeout: null
 		};
 
-        this.devicePixelRatio = window.devicePixelRatio || 1;
+        this.devicePixelRatio = Global.devicePixelRatio || 1;
         
 		this.longTapDelay = 750;
 		this.maxTapAbsX = 30;
@@ -55,11 +59,17 @@ export default class Touch extends Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener('scroll', this.cancelAll, false);
+		if (isNode) {
+	        return;
+	    }
+		Global.addEventListener('scroll', this.cancelAll, false);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this.cancelAll, false);
+		if (isNode) {
+	        return;
+	    }
+		Global.removeEventListener('scroll', this.cancelAll, false);
 	}
 
 	getDefaultTouchInfo() {
