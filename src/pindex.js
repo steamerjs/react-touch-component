@@ -6,7 +6,7 @@ import Global from 'global';
 // 是否在Node环境
 const isNode = typeof window === 'undefined';
 
-let ua = navigator && navigator.userAgent.toLowerCase();
+let ua = Global.navigator && Global.navigator.userAgent && Global.navigator.userAgent.toLowerCase();
 let _platform = function(os) {
     let ver = ('' + (new RegExp(os + '(\\d+((\\.|_)\\d+)*)').exec(ua) || [,0])[1]).replace(/_/g, '.');
     // undefined < 3 === false, but null < 3 === true

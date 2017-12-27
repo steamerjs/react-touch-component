@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import assign from 'object-assign';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import Global from 'global';
 
-let ua = navigator && navigator.userAgent.toLowerCase();
+let ua = Global.navigator && Global.navigator.userAgent && Global.navigator.userAgent.toLowerCase();
 let _platform = function(os) {
     let ver = ('' + (new RegExp(os + '(\\d+((\\.|_)\\d+)*)').exec(ua) || [,0])[1]).replace(/_/g, '.');
     // undefined < 3 === false, but null < 3 === true
@@ -34,7 +35,7 @@ export default class Touch extends Component {
 			longTapTimeout: null
 		};
 
-        this.devicePixelRatio = window.devicePixelRatio || 1;
+        this.devicePixelRatio = Global.devicePixelRatio || 1;
         
 		this.longTapDelay = 750;
 		this.maxTapAbsX = 30;
@@ -55,11 +56,11 @@ export default class Touch extends Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener('scroll', this.cancelAll, false);
+		Global.addEventListener('scroll', this.cancelAll, false);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this.cancelAll, false);
+		Global.removeEventListener('scroll', this.cancelAll, false);
 	}
 
 	getDefaultTouchInfo() {
